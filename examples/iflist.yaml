@@ -51,11 +51,14 @@
 #   remote_port: 9700
 #
 
-- name: "CAN0"
-  driver: "can"
-  device: "can0"
-  addr: 1
+
+- name: "KISS"
+  driver: "kiss"
+  device: "/dev/ttyS1"
+  baudrate: 115200
+  addr: 15
   netmask: 8
   default: true
+  promisc: true
 
  
